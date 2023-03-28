@@ -1,0 +1,156 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  color: #555;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Featured Brands Section */
+
+section.featured-brands {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featured-brand {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 30%;
+}
+
+.featured-brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+.featured-brand h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.featured-brand p {
+  margin: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.featured-brand a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #0077cc;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.featured-brand a:hover {
+  background-color: #005ea8;
+}
+
+/* Posts and Reviews Section */
+
+section.posts-reviews {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px 20px;
+  overflow: hidden;
+  width: calc(33.33% - 20px);
+}
+
+.post h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.post p {
+  margin: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post .author {
+  display: block;
+  margin: 10px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.post a {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #0077cc;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post a:hover {
+  background-color: #005ea8;
+}
+
+/* Submit a Review Section */
+
+section.submit-review {
+  margin: 30px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+}
