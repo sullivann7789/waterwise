@@ -24,7 +24,7 @@ const seedDatabase = async () => {
     await Review.create({
       ...review,
       user_id: users[Math.floor(Math.random() * users.length)].id,
-      watering_hole_id: wateringHole[Math.floor(Math.random() * users.length)].id
+      watering_hole_id: 1
     });
   }
 
