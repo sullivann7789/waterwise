@@ -23,6 +23,14 @@ WateringHole.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    watering_hole_score: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+      validate: {
+        max: 10,
+        min: 0
+      }
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

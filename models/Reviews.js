@@ -23,6 +23,14 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    review_score: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        max: 10,
+        min: 0
+      }
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
