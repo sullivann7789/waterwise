@@ -19,10 +19,6 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     review_score: {
       type: DataTypes.INTEGER,
       allowNull: false,
