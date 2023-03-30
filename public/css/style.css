@@ -1,61 +1,70 @@
-/* Global Styles */
-
-
 html,
 body {
   height: 100%;
 }
+
 body {
-  background: linear-gradient(180deg, #9CD9FB 0%, #0B6DB7 50%, #003C6A 100%);
+  background: linear-gradient(180deg, #9cd9fb 0%, #0b6db7 50%, #003c6a 100%);
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   margin: 0;
   padding: 0;
 }
+
 header {
   background-color: #fff;
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
+
 nav li {
   margin-right: 20px;
 }
+
 nav li:last-child {
   margin-right: 0;
 }
+
 nav a {
   color: #333;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
 }
+
 nav a:hover {
-  color: #0072FF;
+  color: #0072ff;
 }
+
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
 }
+
 .featured-brands {
   text-align: center;
 }
+
 .featured-brands h1 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 40px;
 }
+
 .slider {
   display: flex;
   overflow-x: auto;
@@ -65,15 +74,18 @@ main {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .slider::-webkit-scrollbar {
   display: none;
 }
+
 .slide {
   flex: 0 0 auto;
   width: 80%;
   margin-right: 20px;
   scroll-snap-align: start;
 }
+
 .brand-card {
   background-color: #fff;
   padding: 20px;
@@ -81,24 +93,28 @@ main {
   border-radius: 10px;
   text-align: center;
 }
+
 .brand-card img {
   height: 300px;
   width: 100%;
   margin-bottom: 20px;
 }
+
 .brand-card h3 {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
+
 .brand-card p {
   font-size: 16px;
   margin-top: 10px;
 }
+
 .brand-card a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0072FF;
+  background-color: #0072ff;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
@@ -106,6 +122,26 @@ main {
   font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
+
 .brand-card a:hover {
+  transform: scale(1.1);
+}
+
+.btn {
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-logout {
+  background-color: #ff3333;
+  color: #fff;
+}
+
+.btn-logout:hover {
   transform: scale(1.1);
 }
