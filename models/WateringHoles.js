@@ -19,10 +19,6 @@ WateringHole.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     watering_hole_score: {
       type: DataTypes.DECIMAL,
       allowNull: false,
