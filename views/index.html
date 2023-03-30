@@ -1,69 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Water Comparison Website</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<h1>Water Comparison Website</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Brands</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<main>
-		<section>
-			<h2>Featured Brands</h2>
-			<div class="brand">
-				<img src="images/Aquafina_1.png" alt="Aquafina">
-				<h3>Aquafina</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-				<a href="#">Learn More</a>
-			</div>
-			<div class="brand">
-				<img src="images/Arrowhead_1.jpeg" alt="Arrowhead">
-				<h3>Arrowhead</h3>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<a href="#">Learn More</a>
-			</div>
-			<div class="brand">
-				<img src="brand3.jpg" alt="Dasani">
-				<h3>Dasani</h3>
-				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-				<a href="#">Learn More</a>
-			</div>
-		</section>
-		
-		<section>
-			<h2>Posts and Reviews</h2>
-			<div class="post">
-				<h3>Aquafina Review</h3>
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-				<span class="author">- Jane Doe</span>
-				<a href="#">View Comments</a>
-			</div>
-			<div class="post">
-				<h3>Arrowhead Review</h3>
-				<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<span class="author">- John Smith</span>
-				<a href="#">View Comments</a>
-			</div>
-			<div class="post">
-				<h3>Dasani Review</h3>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<span class="author">- Mary Johnson</span>
-				<a href="#">View Comments</a>
-			</div>
-		</section>
-		
-		<section>
-			<h2>Submit a Review</h2>
-			<form>
-				<label for="brand">Select a Brand:</label>
-				<select id="brand" name
+  <head>
+    <meta charset="utf-8" />
+    <title>Featured Brands</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Featured Brands</a></li>
+          <li><a href="#">Posts/Reviews</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="featured-brands">
+        <h1>Featured Brands</h1>
+        <div class="slider">
+          <div class="slide">
+            <div class="brand-card">
+              <img src="images/Aquafina_2.png" alt="Brand 1" />
+              <h3>Aquafina</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="brand-card">
+              <img src="images/Arrowhead_2.jpeg" alt="Brand 2" />
+              <h3>ArrowHead</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="brand-card">
+              <img src="images/CrystalGeyser_1.webp" alt="Brand 3" />
+              <h3>Crystal Geyser</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="brand-card">
+              <img src="images/Dasani_1.webp" alt="Brand 4" />
+              <h3>Dasani</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

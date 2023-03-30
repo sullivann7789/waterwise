@@ -1,156 +1,110 @@
 /* Global Styles */
 
+
+html,
 body {
-  font-family: Arial, sans-serif;
-  color: #555;
-  background-color: #f5f5f5;
+  height: 100%;
+}
+body {
+  background: linear-gradient(180deg, #9CD9FB 0%, #0B6DB7 50%, #003C6A 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Header */
-
 header {
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #333;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
 nav ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
-  justify-content: space-between;
 }
-
 nav li {
-  margin: 0 10px;
+  margin-right: 20px;
 }
-
+nav li:last-child {
+  margin-right: 0;
+}
 nav a {
-  display: block;
-  padding: 10px;
-  font-weight: bold;
-}
-
-/* Featured Brands Section */
-
-section.featured-brands {
-  margin: 30px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.featured-brand {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 30%;
-}
-
-.featured-brand img {
-  max-width: 100%;
-  height: auto;
-}
-
-.featured-brand h3 {
-  margin: 10px;
-  font-size: 1.5rem;
   color: #333;
-}
-
-.featured-brand p {
-  margin: 10px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.featured-brand a {
-  display: block;
-  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
-  background-color: #0077cc;
-  color: #fff;
+}
+nav a:hover {
+  color: #0072FF;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.featured-brands {
   text-align: center;
-  text-transform: uppercase;
 }
-
-.featured-brand a:hover {
-  background-color: #005ea8;
+.featured-brands h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
-
-/* Posts and Reviews Section */
-
-section.posts-reviews {
-  margin: 30px 0;
+.slider {
   display: flex;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-.post {
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slide {
+  flex: 0 0 auto;
+  width: 80%;
+  margin-right: 20px;
+  scroll-snap-align: start;
+}
+.brand-card {
   background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 0 10px 20px;
-  overflow: hidden;
-  width: calc(33.33% - 20px);
-}
-
-.post h3 {
-  margin: 10px;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.post p {
-  margin: 10px;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.post .author {
-  display: block;
-  margin: 10px;
-  font-size: 0.8rem;
-  color: #999;
-}
-
-.post a {
-  display: block;
-  padding: 10px;
-  font-weight: bold;
-  background-color: #0077cc;
-  color: #fff;
   text-align: center;
-  text-transform: uppercase;
 }
-
-.post a:hover {
-  background-color: #005ea8;
+.brand-card img {
+  width: 80%;
+  margin-bottom: 20px;
 }
-
-/* Submit a Review Section */
-
-section.submit-review {
-  margin: 30px 0;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0);
+.brand-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+.brand-card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.brand-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0072FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+.brand-card a:hover {
+  transform: scale(1.1);
 }
