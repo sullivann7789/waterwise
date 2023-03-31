@@ -175,4 +175,61 @@ form p {
 }
 
 /* Reviews Page Styles */
-/* #reviews-page */
+.watering_hole {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.watering_hole h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.watering_hole p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.watering_hole form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.watering_hole form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.watering_hole form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.watering_hole form button[type="submit"]:hover {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.watering_hole form button[type="submit"]:hover {
+  background-color: #0073aa;
+}
