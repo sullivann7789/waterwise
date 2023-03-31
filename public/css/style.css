@@ -1,147 +1,178 @@
-html,
-body {
-  height: 100%;
-}
-
+/* Global Styles */
 body {
   background: linear-gradient(180deg, #9cd9fb 0%, #0b6db7 50%, #003c6a 100%);
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
   margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
-header {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+a {
+  color: #333;
+  text-decoration: none;
 }
 
+.btn {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0073aa;
+}
+
+/* Header Styles */
 nav {
+  background-color: #233d5e;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  border-bottom: 5px solid #9cd9fb; /* added light blue bottom border */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav ul {
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 nav li {
   margin-right: 20px;
 }
 
-nav li:last-child {
-  margin-right: 0;
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 nav a {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #0072ff;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.featured-brands {
-  text-align: center;
-}
-
-.featured-brands h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slide {
-  flex: 0 0 auto;
-  width: 80%;
+  color: white;
   margin-right: 20px;
-  scroll-snap-align: start;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.brand-card {
-  background-color: #fff;
+nav .btn-logout {
+  background-color: #f44336;
+}
+
+nav .btn-logout:hover {
+  background-color: #d32f2f;
+}
+/* Featured Brands Slider */
+#featured-brands {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#featured-brands .slider {
+  display: flex;
+  width: 300%;
+  position: relative;
+  left: 0;
+  transition: left 0.75s;
+}
+
+#featured-brands .slider .slide {
+  width: 33.333%;
+}
+
+#featured-brands .slider .slide img {
+  width: 100%;
+}
+
+#featured-brands .controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#featured-brands .controls button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#featured-brands .controls button:focus {
+  outline: none;
+}
+
+#featured-brands .controls button.active {
+  color: #008cba;
+}
+
+/* Login and Signup Styles */
+form {
+  margin: 20px;
   padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+}
+
+form p {
+  margin-top: 20px;
   text-align: center;
 }
 
-.brand-card img {
-  height: 300px;
+/* Specific page styles */
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#login-page .login-form {
+  max-width: 500px;
   width: 100%;
-  margin-bottom: 20px;
 }
 
-.brand-card h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
+#signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.brand-card p {
-  font-size: 16px;
-  margin-top: 10px;
+#signup-page .signup-form {
+  max-width: 500px;
+  width: 100%;
 }
 
-.brand-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0072ff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-}
-
-.brand-card a:hover {
-  transform: scale(1.1);
-}
-
-.btn {
-  border-radius: 20px;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-logout {
-  background-color: #ff3333;
-  color: #fff;
-}
-
-.btn-logout:hover {
-  transform: scale(1.1);
-}
+/* Reviews Page Styles */
+/* #reviews-page */
