@@ -1,8 +1,11 @@
 const router = require('express').Router();
 const usersRouter = require('./users-router');
-const exampleRouter = require('./example-router');
+const reviewsRouter = require('./reviews-router');
+const wateringHolesRouter = require('./wateringholes-router');
+
 
 router.use('/users', usersRouter);
-router.use('/example', exampleRouter);
+router.use('/reviews', reviewsRouter);
+router.use('/watering_holes', wateringHolesRouter);
 
 module.exports = router;
