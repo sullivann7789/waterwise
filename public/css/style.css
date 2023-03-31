@@ -26,11 +26,33 @@ a {
 
 /* Header Styles */
 nav {
-  background-color: #333;
+  background-color: #233d5e;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  border-bottom: 5px solid #9cd9fb; /* added light blue bottom border */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 nav a {
@@ -46,6 +68,50 @@ nav .btn-logout {
 
 nav .btn-logout:hover {
   background-color: #d32f2f;
+}
+/* Featured Brands Slider */
+#featured-brands {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+#featured-brands .slider {
+  display: flex;
+  width: 300%;
+  position: relative;
+  left: 0;
+  transition: left 0.75s;
+}
+
+#featured-brands .slider .slide {
+  width: 33.333%;
+}
+
+#featured-brands .slider .slide img {
+  width: 100%;
+}
+
+#featured-brands .controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#featured-brands .controls button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#featured-brands .controls button:focus {
+  outline: none;
+}
+
+#featured-brands .controls button.active {
+  color: #008cba;
 }
 
 /* Login and Signup Styles */
@@ -109,29 +175,4 @@ form p {
 }
 
 /* Reviews Page Styles */
-#reviews-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#reviews-page h1 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-/* Wateringholes Page Styles */
-#wateringholes-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#wateringholes-page h1 {
-  text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+/* #reviews-page */
