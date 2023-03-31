@@ -41,4 +41,8 @@ router.get('/wateringholes', (req, res) => {
   res.render('wateringholes', { title: 'Watering Holes' });
 });
 
+router.get('/reviews', (req, res) => {
+  res.render('reviews', { title: 'Reviews'})
+})
+
 module.exports = router;
