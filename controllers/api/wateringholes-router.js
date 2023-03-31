@@ -1,4 +1,4 @@
-const { WateringHole } = require('../../models');
+const { WateringHole, Review } = require('../../models');
 const router = require('express').Router();
 const withAuth = require('../../util/withAuth');
 
@@ -8,7 +8,6 @@ router.post('/', withAuth, async (req, res) => {
             ...req.body,
              user_id: req.session.user_id,
         });
-        req.session.save(() => res.json({ id: wateringHoleData.id }));
         res.status(200).json(wateringHoleData);
     } catch (err) {
         console.error(err);
@@ -28,11 +27,8 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/:id', withAuth, async (req, res) => {
     try {
-        const wateringHoleData = WateringHole.findOne({
-            where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
-              }
+        const wateringHoleData = await WateringHole.findByPk( req.params.id, {
+            include: { model: Review }
         });
 
         if (!wateringHoleData) {
@@ -50,7 +46,7 @@ router.get('/:id', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const wateringHoleData = await Project.destroy({
+      const wateringHoleData = await WateringHole.destroy({
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
