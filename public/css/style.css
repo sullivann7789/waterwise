@@ -1,146 +1,137 @@
-html,
-body {
-  height: 100%;
-}
-
+/* Global Styles */
 body {
   background: linear-gradient(180deg, #9cd9fb 0%, #0b6db7 50%, #003c6a 100%);
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  font-size: 16px;
 }
 
-header {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav a {
+a {
   color: #333;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #0072ff;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.featured-brands {
-  text-align: center;
-}
-
-.featured-brands h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slide {
-  flex: 0 0 auto;
-  width: 80%;
-  margin-right: 20px;
-  scroll-snap-align: start;
-}
-
-.brand-card {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.brand-card img {
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.brand-card h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.brand-card p {
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.brand-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0072ff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: all 0.2s ease-in-out;
-}
-
-.brand-card a:hover {
-  transform: scale(1.1);
 }
 
 .btn {
-  border-radius: 20px;
+  background-color: #008cba;
+  color: white;
   border: none;
-  font-size: 18px;
-  font-weight: bold;
   padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
 
-.btn-logout {
-  background-color: #ff3333;
-  color: #fff;
+.btn:hover {
+  background-color: #0073aa;
 }
 
-.btn-logout:hover {
-  transform: scale(1.1);
+/* Header Styles */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav a {
+  color: white;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav .btn-logout {
+  background-color: #f44336;
+}
+
+nav .btn-logout:hover {
+  background-color: #d32f2f;
+}
+
+/* Login and Signup Styles */
+form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+}
+
+form p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Specific page styles */
+#login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#login-page .login-form {
+  max-width: 500px;
+  width: 100%;
+}
+
+#signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#signup-page .signup-form {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Reviews Page Styles */
+#reviews-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#reviews-page h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Wateringholes Page Styles */
+#wateringholes-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#wateringholes-page h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
 }
