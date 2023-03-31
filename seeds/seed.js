@@ -1,9 +1,10 @@
-const sequelize = require('../config/connection');
 const { User, WateringHole, Review } = require('../models');
 
 const userData = require('./userData.json');
 const wateringHoleData = require('./wateringHoleData.json');
 const reviewData = require('./reviewData.json');
+
+const sequelize = require('../config/connection');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -24,7 +25,7 @@ const seedDatabase = async () => {
     await Review.create({
       ...review,
       user_id: users[Math.floor(Math.random() * users.length)].id,
-      watering_hole_id: wateringHole[Math.floor(Math.random() * users.length)].id
+      watering_hole_id: 1
     });
   }
 

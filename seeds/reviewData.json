@@ -2,6 +2,11 @@
     {
         "name": "Dasani Sucks",
         "description": "I HATE DASANI WATER",
-        "reviewScore": 1
+        "review_score": 1
+    },
+    {
+        "name": "Dasani Sucks",
+        "description": "I HATE DASANI WATER",
+        "review_score": 1
     }
 ]
