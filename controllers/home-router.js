@@ -37,4 +37,8 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
+router.get('/wateringholes', (req, res) => {
+  res.render('wateringholes', { title: 'Watering Holes' });
+});
+
 module.exports = router;
