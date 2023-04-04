@@ -85,23 +85,23 @@ If you would like to contribute to this project, please reach out to the squad!
 This application was built using Node.js and utilizes the following npm packages:
 | Plugin | README |
 | ------ | ------ |
-bcrypt -
-mysql2 -
-connect-session-sequelize -
-dotenv -
-express -
-express-handlebars -
+bcrypt - https://www.npmjs.com/package/bcrypt
+mysql2 - https://www.npmjs.com/package/mysql2
+connect-session-sequelize - https://www.npmjs.com/package/connect-session-sequelize
+dotenv - https://www.npmjs.com/package/dotenv
+express - https://www.npmjs.com/package/express
+express-handlebars - https://www.npmjs.com/package/express-handlebars
 express-session -
-sequelize -
+sequelize - https://www.npmjs.com/package/express-session
 
 ```bash
 devDependencies
 ```
 
-eslint -
-eslint-config -
-prettier -
-nodemon -
+eslint - https://www.npmjs.com/package/eslint
+eslint-config - https://www.npmjs.com/package/eslint-config-prettier
+prettier - https://www.npmjs.com/package/prettier
+nodemon - https://www.npmjs.com/package/nodemon
 
 ## License✨
 
