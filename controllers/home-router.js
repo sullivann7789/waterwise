@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, WateringHole, Review } = require('../models');
 
 // use withAuth middleware to redirect from protected routes.
 // const withAuth = require("../util/withAuth");
@@ -37,12 +37,34 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
-router.get('/wateringholes', (req, res) => {
-  res.render('wateringholes', { title: 'Watering Holes' });
+router.get('/wateringholes', async (req, res) => {
+  try {
+    const wateringHoleData  = await WateringHole.findAll();
+    const wateringHoles = wateringHoleData.map((wateringHole) => wateringHole.get({ plain: true }));
+    res.render('wateringholes', { 
+      wateringHoles,
+      isLoggedIn: req.session.isLoggedIn
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/reviews', (req, res) => {
-  res.render('reviews', { title: 'Reviews'})
+router.get('/wateringholes/:id', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      where: {
+        watering_hole_id: req.params.id
+      }
+    });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    res.render('reviews', { 
+      reviews,
+      isLoggedIn: req.session.isLoggedIn
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
 
 module.exports = router;
