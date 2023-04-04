@@ -5,9 +5,6 @@ Have you ever found yourself at the store thirsty for some good water? but all t
 In these holes you will find comments, reviews, and user end stories on the water you may be looking to buy!
 
 ![alt](https://)
-![alt](https://)
-![alt](https://)
-![alt](https://)
 
 - [Installation✨](#installation✨)
 - [Setup✨](#setup✨)
