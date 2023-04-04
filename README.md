@@ -4,22 +4,46 @@ Have you ever found yourself at the store thirsty for some good water? but all t
 
 In these holes you will find comments, reviews, and user end stories on the water you may be looking to buy!
 
-- [Setup](#setup)
-- [Development](#development)
-- [Sessions](#sessions)
-- [Authentication](#authentication)
-- [Templates](#templates)
-- [Code Style](#code-style)
-- [Deploy to Heroku](#deploy-to-heroku)
+![alt](https://)
+![alt](https://)
+![alt](https://)
+![alt](https://)
 
-## Setup
+- [Installation✨](#installation✨)
+- [Setup✨](#setup✨)
+- [Usage✨](#usage✨)
+- [Technologies✨](#technologies✨)
+- [LIVE✨](#LIVE✨)
+- [Contributing✨](#contributing✨)
+- [Shouts-Out✨](#shouts-out✨)
+- [License✨](#license✨)
+
+## Installation✨
+
+Visit github and clone the ssh or http [HERE](https://cmadrid48.github.io/openVVeatherVVidget/) to install, or contribute.
+
+To install the application, follow these steps:
+
+```bash
+git clone https://github.com/sullivann7789/waterwise.git [destination]
+Clone the repository to your local machine.
+Navigate to the project directory in the terminal.
+Run npm install to install the necessary dependencies.
+```
+
+## Setup✨
 
 1. Run `npm i`.
 2. You will need an existing MySQL database. **mysql -> source db/schema.sql**
 3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
 4. Run `npm start` to start the app.
 
-## Technologies
+## Usage✨
+
+Once server has been established you may visit the site. Upon enetering you will be prompted to `create an account` and or `login`.
+Create your account and begin your journey into your favorite watring hole, or maybe take a dip in a new hole!
+
+## Technologies✨
 
 - Session
 
@@ -39,3 +63,51 @@ You can add your own custom helper functions by exporting them from [util/helper
 - Prettier
 
 [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
+
+## LIVE✨
+
+[Live deployed Heroku server](https://)
+
+## Contributing✨
+
+If you would like to contribute to this project, please reach out to the squad!
+
+-
+-
+-
+-
+
+...or please follow these guidelines:
+
+- Fork this repository.
+- Create a new branch with your changes: git checkout -b my-feature-branch
+- Commit your changes: git commit -m "Add some feature"
+- Push to the branch: git push origin my-feature-branch
+- Submit a pull request.
+
+## Shouts-Out✨
+
+This application was built using Node.js and utilizes the following npm packages:
+| Plugin | README |
+| ------ | ------ |
+bcrypt -
+mysql2 -
+connect-session-sequelize -
+dotenv -
+express -
+express-handlebars -
+express-session -
+sequelize -
+
+```bash
+devDependencies
+```
+
+eslint -
+eslint-config -
+prettier -
+nodemon -
+
+## License✨
+
+This project is licensed under the terms of the MIT license.
