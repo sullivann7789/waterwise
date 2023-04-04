@@ -4,8 +4,6 @@ Have you ever found yourself at the store thirsty for some good water? but all t
 
 In these holes you will find comments, reviews, and user end stories on the water you may be looking to buy!
 
-![alt](https://)
-
 - [Installation✨](#installation✨)
 - [Setup✨](#setup✨)
 - [Usage✨](#usage✨)
@@ -69,10 +67,10 @@ You can add your own custom helper functions by exporting them from [util/helper
 
 If you would like to contribute to this project, please reach out to the squad!
 
--
--
--
--
+- @MeyerTalon
+- @sullivann7789
+- @jacobgoreham
+- @cmadrid48
 
 ...or please follow these guidelines:
 
