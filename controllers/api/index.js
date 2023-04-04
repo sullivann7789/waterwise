@@ -6,6 +6,6 @@ const wateringHolesRouter = require('./wateringholes-router');
 
 router.use('/users', usersRouter);
 router.use('/reviews', reviewsRouter);
-router.use('/watering_holes', wateringHolesRouter);
+router.use('/wateringholes', wateringHolesRouter);
 
 module.exports = router;
