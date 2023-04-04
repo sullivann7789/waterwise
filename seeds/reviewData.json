@@ -2,11 +2,19 @@
     {
         "name": "Dasani Sucks",
         "description": "I HATE DASANI WATER",
-        "review_score": 1
+        "review_score": 1,
+        "watering_hole_id": 1
     },
     {
-        "name": "Dasani Sucks",
-        "description": "I HATE DASANI WATER",
-        "review_score": 1
+        "name": "Aquafina is goated",
+        "description": "I positively love aquafina water nothing quenches my thirst quite like it.",
+        "review_score": 10,
+        "watering_hole_id": 2
+    },
+    {
+        "name": "Fiji is overrated",
+        "description": "Decent water but way too overpriced.",
+        "review_score": 5,
+        "watering_hole_id": 3
     }
 ]
