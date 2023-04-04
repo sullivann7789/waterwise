@@ -7,8 +7,7 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Featured Brands</a>
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <button
           class="navbar-toggler"
           type="button"
@@ -34,25 +33,20 @@
     </header>
 
     <h2>Water by Brands</h2>
-    <form>
-      <label for="waterbrand">Water Brand Name:</label><br />
-      <input type="text" name="waterbrand" id="waterbrand"/><br />
-      <button class="btn" type="submit">Submit</button>
-
-
-    </form>
 
     <form>
-      <label for="waterbrandpost">Post Water Brand Review:</label>
-      <label for="waterbrandtype">Water Brand:</label>
-      <input type="text" name="waterbrandtype"/>
-      <label for="waterbrandpost">Write Review here:</label>
-       <input type="text" name="waterbrandpost" id="waterbrand"/><br />
-      <button class="btn" type="submit">Submit</button>
+      {{#if isLoggedIn}}
+        <label for="waterbrandpost">Post Water Brand Review:</label>
+        <label for="waterbrandtype">Water Brand:</label>
+        <input type="text" name="waterbrandtype" />
+        <label for="waterbrandpost">Write Review here:</label>
+        <input type="text" name="waterbrandpost" id="waterbrand" /><br />
+        <button class="btn" type="submit">Submit</button>
+      {{else}}
+        <p>Already have an account? <a href="/login">Login Here</a></p>
+      {{/if}}
     </form>
-    <p>
-
-    </p>
+    <script src="/js/main.js"></script>
 
   </body>
 </html>
