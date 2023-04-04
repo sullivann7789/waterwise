@@ -50,8 +50,21 @@ router.get('/wateringholes', async (req, res) => {
   }
 });
 
-router.get('/reviews', (req, res) => {
-  res.render('reviews', { title: 'Reviews'})
+router.get('/wateringholes/:id', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      where: {
+        watering_hole_id: req.params.id
+      }
+    });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    res.render('reviews', { 
+      reviews,
+      isLoggedIn: req.session.isLoggedIn
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
 
 module.exports = router;
