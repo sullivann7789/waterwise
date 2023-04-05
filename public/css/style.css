@@ -186,33 +186,160 @@ form p {
   width: 100%;
 }
 
-/* Reviews Page Styles */
+/* Watering Hole Page Styles */
+/* Top Brands */
+
+.top-water-brands {
+  background: linear-gradient(180deg, #9cd9fb 0%, #0b6db7 50%, #003c6a 100%);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.water-brand-card {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  display: inline-block;
+  text-align: center;
+}
+
+.water-brand-card h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #0b6db7;
+  margin-top: 20px;
+}
+
+.water-brand-card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.water-brand-card img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.water-brand-card p:first-child {
+  font-size: 20px;
+  color: #0b6db7;
+  margin-top: 0;
+}
+
+.top-water-brands h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.top-water-brands p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Reviews */
+
+.reviews-section {
+  background: linear-gradient(180deg, #003c6a 0%, #0b6db7 50%, #9cd9fb 100%);
+
+  padding: 50px 0;
+  text-align: center;
+  transition: background 1s ease-in-out;
+}
+
+/* .reviews-section:hover {
+  background: linear-gradient(180deg, #003c6a 0%, #0b6db7 50%, #9cd9fb 100%);
+} */
+
+.reviews-section h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-card {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+}
+
+.review-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #0b6db7;
+  margin-top: 20px;
+}
+
+.review-card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.review-card .rating {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.review-card .author {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Form for Review */
+
 .watering_hole {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
+  text-align: center;
 }
 
 .watering_hole h2 {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .watering_hole p {
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
 }
 
 .watering_hole form label {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
 }
 
 .watering_hole form textarea {
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -223,6 +350,7 @@ form p {
 }
 
 .watering_hole form button[type="submit"] {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
   margin-top: 20px;
   background-color: #007bff;
@@ -244,4 +372,53 @@ form p {
 
 .watering_hole form button[type="submit"]:hover {
   background-color: #0073aa;
+}
+
+/* Rating section */
+
+label[for="star5"]:before {
+  content: "5 💧";
+}
+
+label[for="star4"]:before {
+  content: "4 💧";
+}
+
+label[for="star3"]:before {
+  content: "3 💧";
+}
+
+label[for="star2"]:before {
+  content: "2 💧";
+}
+
+label[for="star1"]:before {
+  content: "1 💧";
+}
+
+.rating-section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.rating-section input[type="radio"] {
+  display: none;
+}
+
+.rating-section label {
+  font-size: 36px;
+  cursor: pointer;
+  color: #e4e4e4;
+  transition: color 0.2s;
+}
+
+.rating-section label:hover,
+.rating-section label:hover ~ label {
+  color: black;
+}
+
+.rating-section input[type="radio"]:checked ~ label {
+  color: black;
 }
