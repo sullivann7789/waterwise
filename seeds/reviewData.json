@@ -1,20 +1,146 @@
 [
-    {
-        "name": "Dasani Sucks",
-        "description": "I HATE DASANI WATER",
-        "review_score": 1,
-        "watering_hole_id": 1
-    },
-    {
-        "name": "Aquafina is goated",
-        "description": "I positively love aquafina water nothing quenches my thirst quite like it.",
-        "review_score": 10,
-        "watering_hole_id": 2
-    },
-    {
-        "name": "Fiji is overrated",
-        "description": "Decent water but way too overpriced.",
-        "review_score": 5,
-        "watering_hole_id": 3
-    }
+  {
+    "name": "Dasani Suckss",
+    "description": "I HATE DASANI WATER",
+    "review_score": 1,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "McDonies had EM",
+    "description": "I get these to replace my soda at mcdonies d all the time!",
+    "review_score": 10,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "overrated",
+    "description": "Decent water but way too overpriced.",
+    "review_score": 5,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "Dasani is aight",
+    "description": "nuff said....",
+    "review_score": 3,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "who named this?",
+    "description": "Im offended",
+    "review_score": 10,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "I bought this water and...",
+    "description": "i bought this water for my kids and they did not like it. I will not be purchasing again.",
+    "review_score": 3,
+    "watering_hole_id": 1
+  },
+  {
+    "name": "Goated",
+    "description": "Aquafina water is the purest water in the world. nothing coompares. you mortal body can not fathom this taste.",
+    "review_score": 10,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "HOT STUFF",
+    "description": "who got this water? i got this water. do you have this water?",
+    "review_score": 10,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "Decent",
+    "description": "Decent water but way too overpriced. i think ill take my money somewhere else.",
+    "review_score": 5,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "Jacob",
+    "description": "jacob helped me, but he didnt even help put the water in my car. I will never shop at Target again. ",
+    "review_score": 3,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "cheap but not worth it",
+    "description": "bought this water because it was cheap, but not worth it. ",
+    "review_score": 4,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "aquafina gang",
+    "description": "Been drinking that aquaFINE since 99",
+    "review_score": 7,
+    "watering_hole_id": 2
+  },
+  {
+    "name": "They raised the price!",
+    "description": "Use to be able to buy a jug for like 69 cents, what happened?! Still love this water tho!",
+    "review_score": 1,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "Price!",
+    "description": "Best Bang for you buck people!",
+    "review_score": 10,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "overrated",
+    "description": "Decent water but way too overpriced.",
+    "review_score": 5,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "CG is aight",
+    "description": "nuff said....",
+    "review_score": 3,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "yup!",
+    "description": "good stuff man.",
+    "review_score": 10,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "broke my toe",
+    "description": "I once was carrying 8 of these bottles at once and the plastic band broke, dropping the jug on my toe, breaking it in half. Good water though.",
+    "review_score": 3,
+    "watering_hole_id": 3
+  },
+  {
+    "name": "Good stuff",
+    "description": "this water is probably the greatest of all time bro",
+    "review_score": 10,
+    "watering_hole_id": 4
+  },
+  {
+    "name": "TRASH!",
+    "description": "this is probably the worst water money can buy. why someone would spend their hard earned money on this amazes me. I would rather be thirsty than drink this stuff .",
+    "review_score": 1,
+    "watering_hole_id": 4
+  },
+  {
+    "name": "reclaimed water",
+    "description": "Is this wayter reclaimed? i actually dont think i would water my plants with this.",
+    "review_score": 1,
+    "watering_hole_id": 4
+  },
+  {
+    "name": "no no no no",
+    "description": "No no no i wont drink this Garbage",
+    "review_score": 1,
+    "watering_hole_id": 4
+  },
+  {
+    "name": "tap water",
+    "description": "Literally proven to be tap water 2/10 would not recommmend",
+    "review_score": 1,
+    "watering_hole_id": 4
+  },
+  {
+    "name": "ewwwwwwwwwww",
+    "description": "Ewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww!~",
+    "review_score": 3,
+    "watering_hole_id": 4
+  }
 ]
