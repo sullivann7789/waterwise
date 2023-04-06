@@ -476,6 +476,26 @@ form p {
 
 /* Rating section */
 
+label[for="star10"]:before {
+  content: "10 💧";
+}
+
+label[for="star9"]:before {
+  content: "9 💧";
+}
+
+label[for="star8"]:before {
+  content: "8 💧";
+}
+
+label[for="star7"]:before {
+  content: "7 💧";
+}
+
+label[for="star6"]:before {
+  content: "6 💧";
+}
+
 label[for="star5"]:before {
   content: "5 💧";
 }
