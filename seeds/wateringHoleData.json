@@ -10,8 +10,13 @@
     "watering_hole_score": 7
   },
   {
-    "name": "Fiji",
+    "name": "Crystal Geyser",
     "description": "For all my 1 percenters out there.",
     "watering_hole_score": 9
+  },
+  {
+    "name": "Arrowhead",
+    "description": "from the rain gutters, live.",
+    "watering_hole_score": 1
   }
 ]
