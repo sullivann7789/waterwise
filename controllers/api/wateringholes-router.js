@@ -17,7 +17,7 @@ router.post("/", withAuth, async (req, res) => {
 
 router.get("/", withAuth, async (req, res) => {
   try {
-    const wateringHoleData = await WateringHole.findAll();
+    const wateringHoleData = await WateringHole.findAll({ include: [{ model: Review }]});
     res.status(200).json(wateringHoleData);
   } catch (err) {
     console.error(err);

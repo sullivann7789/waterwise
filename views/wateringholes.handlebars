@@ -31,9 +31,17 @@
     </header>
 
 <div class="top-water-brands">
-    <h2>Top Water Brands</h2>
+  <h2>Top Water Brands</h2>
+  {{#each wateringHoles as |wateringHole|}}
+  <div class="water-brand-card">
+    <img src="../images/WateringHole.jpeg" alt="Watering hole logo">
+    <h2>{{wateringHole.name}}</h2>
+    <p>Overall Rating: {{overallScore wateringHole}}</p>
+  </div>
+  {{/each}}
 
-<div class="water-brand-card">
+
+{{!-- <div class="water-brand-card">
   <img src="images/Aquafina_1.png" alt="Dasani logo">
   <h2>Dasani</h2>
   <p>Overall Rating: {{dasani_rating}}</p>
@@ -65,7 +73,7 @@
     <p>Overall Rating: {{watering_hole_score}}</p>
     <p>{{top_comment}}</p>
   </div>
-{{/each}}
+{{/each}} --}}
 
 
 <form>

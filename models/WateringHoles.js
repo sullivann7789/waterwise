@@ -19,9 +19,6 @@ WateringHole.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    top_comment: {
-      type: DataTypes.STRING,
-    },
     watering_hole_score: {
       type: DataTypes.DECIMAL,
       allowNull: false,
