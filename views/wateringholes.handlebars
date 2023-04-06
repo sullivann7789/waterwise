@@ -9,7 +9,6 @@
     <header>
       <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <a id="navbar-brand" href="/">Featured Brands</a>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -34,23 +33,31 @@
 <form>
   {{#if isLoggedIn}}
   <input type="hidden" name="user_id" value="{{user_id}}">
-    <label for="wateringholepost">Post Watering Hole Review:</label>
+    <label for="wateringholepost">Creae a Watering Hole:</label>
     <label for="wateringholetype">Watering Hole Name:</label>
     <input type="text" name="wateringholetype" />
-    <label for="wateringholepost">Write Review here:</label>
+    <label for="wateringholepost">Watering Hole Description here:</label>
     <input type="text" name="wateringholepost" id="wateringhole" /><br />
-    <label for="wateringholerating">Rating:</label>
+    <label for="wateringholerating">Initial Rating:</label>
     <div class="rating-section">
+      <input type="radio" id="star10" name="wateringholerating" value="10" />
+      <label for="star10"></label>
+      <input type="radio" id="star9" name="wateringholerating" value="9" />
+      <label for="star9"></label>
+      <input type="radio" id="star8" name="wateringholerating" value="8" />
+      <label for="star8"></label>
+      <input type="radio" id="star7" name="wateringholerating" value="7" />
+      <label for="star7"></label>
+      <input type="radio" id="star6" name="wateringholerating" value="6" />
+      <label for="star6"></label>
       <input type="radio" id="star5" name="wateringholerating" value="5" />
       <label for="star5"></label>
       <input type="radio" id="star4" name="wateringholerating" value="4" />
       <label for="star4"></label>
-        <input type="radio" id="star3" name="wateringholerating" value="3" />
+      <input type="radio" id="star3" name="wateringholerating" value="3" />
       <label for="star3"></label>
-    
       <input type="radio" id="star2" name="wateringholerating" value="2" />
       <label for="star2"></label>
-  
       <input type="radio" id="star1" name="wateringholerating" value="1" />
       <label for="star1"></label>
     </div>
