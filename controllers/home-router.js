@@ -55,12 +55,9 @@ router.get('/wateringholes', async (req, res) => {
 
 router.get('/wateringholes/:id', async (req, res) => {
   try {
-    const reviewData = await WateringHole.findByPk(req.params.id, {
-      include: [
-        {
-          model: Review
-        }
-      ]
+    const reviewData = await Review.findAll({
+      where: { watering_hole_id: req.params.id },
+      include: [{ model: User }, { model: WateringHole }]
     });
     const reviews = reviewData.map((review) => review.get({ plain: true }));
     res.render('reviews', { 

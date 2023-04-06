@@ -1,4 +1,4 @@
-const { WateringHole, Review } = require("../../models");
+const { WateringHole, Review, User } = require("../../models");
 const router = require("express").Router();
 const withAuth = require("../../util/withAuth");
 
@@ -17,7 +17,7 @@ router.post("/", withAuth, async (req, res) => {
 
 router.get("/", withAuth, async (req, res) => {
   try {
-    const wateringHoleData = await WateringHole.findAll({ include: [{ model: Review }]});
+    const wateringHoleData = await WateringHole.findAll({ include: [{ model: Review }, {model: User }]});
     res.status(200).json(wateringHoleData);
   } catch (err) {
     console.error(err);
@@ -25,10 +25,10 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const wateringHoleData = await WateringHole.findByPk(req.params.id, {
-      include: { model: Review },
+      include: [{ model: Review }, { model: User }],
     });
 
     if (!wateringHoleData) {

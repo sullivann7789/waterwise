@@ -35,45 +35,10 @@
   {{#each wateringHoles as |wateringHole|}}
   <div class="water-brand-card">
     <img src="../images/WateringHole.jpeg" alt="Watering hole logo">
-    <h2>{{wateringHole.name}}</h2>
+    <h2><a href="/wateringholes/{{wateringHole.id}}">{{wateringHole.name}}</a></h2>
     <p>Overall Rating: {{overallScore wateringHole}}</p>
   </div>
   {{/each}}
-
-
-{{!-- <div class="water-brand-card">
-  <img src="images/Aquafina_1.png" alt="Dasani logo">
-  <h2>Dasani</h2>
-  <p>Overall Rating: {{dasani_rating}}</p>
-  <p>{{dasani_top_comment}}</p>
-</div>
-
-<div class="water-brand-card">
-  <img src="images/{{name}}_1.png" alt="Aquafina logo">
-  <h2>{{name}}</h2>
-  <p>Overall Rating: {{watering_hole_score}}</p>
-  <p>{{top_comment}}</p>
-</div>
-
-<div class="water-brand-card">
-  <img src="images/Aquafina_1.png" alt="Evian logo">
-  <h2>Evian</h2>
-  <p>Overall Rating: {{watering_hole_score}}</p>
-  <p>{{evian_top_comment}}</p>
-</div>
-</div>
-
-<div class="reviews-section">
-<h2>Watering Holes Reviews</h2>
-{{#each wateringHolesData}}
-{{log this}}
-  <div class="review-section">
-    <img src="{{logo}}" alt="{{name}} logo">
-    <h2>{{name}}</h2>
-    <p>Overall Rating: {{watering_hole_score}}</p>
-    <p>{{top_comment}}</p>
-  </div>
-{{/each}} --}}
 
 
 <form>
