@@ -39,9 +39,12 @@ router.get('/signup', (req, res) => {
 
 router.get('/wateringholes', async (req, res) => {
   try {
-    const wateringHoleData  = await WateringHole.findAll();
+    const wateringHoleData  = await WateringHole.findAll({
+      include: [{ model: Review }]
+    });
     const wateringHoles = wateringHoleData.map((wateringHole) => wateringHole.get({ plain: true }));
-    res.render('wateringholes', { 
+    res.render('wateringholes', {
+      title: 'Watering Holes', 
       wateringHoles,
       isLoggedIn: req.session.isLoggedIn
     });
