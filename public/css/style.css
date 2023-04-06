@@ -6,8 +6,14 @@ body {
   font-size: 16px;
 }
 
-#navbar {
-  background-color: #003c6a;
+.navbar-brand:hover {
+  color: rgb(157, 157, 157);
+  text-decoration: none;
+}
+
+#navbar-brand:hover {
+  color: rgb(157, 157, 157);
+  text-decoration: none;
 }
 
 .nav-link {
@@ -28,12 +34,40 @@ a {
   cursor: pointer;
 }
 
-.btn:hover {
+/* .btn:hover {
   background-color: #0073aa;
   text-decoration: none;
+} */
+
+/* About us section */
+header {
+  background-color: #003c6a;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-/* Header Styles */
+header h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #9cd9fb; /* added light blue bottom border */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* Navigation Styles */
 nav {
   background-color: #003c6a;
   display: flex;
