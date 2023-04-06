@@ -41,43 +41,36 @@
 </div>
 
 <div class="water-brand-card">
-  <img src="images/Aquafina_1.png" alt="Aquafina logo">
-  <h2>Aquafina</h2>
-  <p>Overall Rating: {{aquafina_rating}}</p>
-  <p>{{aquafina_top_comment}}</p>
+  <img src="images/{{name}}_1.png" alt="Aquafina logo">
+  <h2>{{name}}</h2>
+  <p>Overall Rating: {{watering_hole_score}}</p>
+  <p>{{top_comment}}</p>
 </div>
 
 <div class="water-brand-card">
   <img src="images/Aquafina_1.png" alt="Evian logo">
   <h2>Evian</h2>
-  <p>Overall Rating: {{evian_rating}}</p>
+  <p>Overall Rating: {{watering_hole_score}}</p>
   <p>{{evian_top_comment}}</p>
 </div>
 </div>
 
 <div class="reviews-section">
 <h2>Watering Holes Reviews</h2>
-{{#each reviews}}
+{{#each wateringHolesData}}
+{{log this}}
   <div class="review-section">
     <img src="{{logo}}" alt="{{name}} logo">
     <h2>{{name}}</h2>
-    <p>Overall Rating: {{rating}}</p>
+    <p>Overall Rating: {{watering_hole_score}}</p>
     <p>{{top_comment}}</p>
-    <form>
-      {{!-- {{#if isLoggedIn}} --}}
-        <label for="comment">Leave a comment:</label>
-        <textarea id="comment" name="comment"></textarea>
-        <button class="btn" type="submit">Submit</button>
-      {{!-- {{else}} --}}
-        <p>Please sign in to leave a comment.</p>
-      {{!-- {{/if}} --}}
-    </form>
   </div>
 {{/each}}
 
 
 <form>
-  {{!-- {{#if isLoggedIn}} --}}
+  {{#if isLoggedIn}}
+  <input type="hidden" name="user_id" value="{{user_id}}">
     <label for="wateringholepost">Post Watering Hole Review:</label>
     <label for="wateringholetype">Watering Hole Name:</label>
     <input type="text" name="wateringholetype" />
@@ -85,21 +78,23 @@
     <input type="text" name="wateringholepost" id="wateringhole" /><br />
     <label for="wateringholerating">Rating:</label>
     <div class="rating-section">
-      <input type="radio" id="star1" name="wateringholerating" value="1" />
-      <label for="star1"></label>
-      <input type="radio" id="star2" name="wateringholerating" value="2" />
-      <label for="star2"></label>
-      <input type="radio" id="star3" name="wateringholerating" value="3" />
-      <label for="star3"></label>
-      <input type="radio" id="star4" name="wateringholerating" value="4" />
-      <label for="star4"></label>
       <input type="radio" id="star5" name="wateringholerating" value="5" />
       <label for="star5"></label>
+      <input type="radio" id="star4" name="wateringholerating" value="4" />
+      <label for="star4"></label>
+        <input type="radio" id="star3" name="wateringholerating" value="3" />
+      <label for="star3"></label>
+    
+      <input type="radio" id="star2" name="wateringholerating" value="2" />
+      <label for="star2"></label>
+  
+      <input type="radio" id="star1" name="wateringholerating" value="1" />
+      <label for="star1"></label>
     </div>
     <button class="btn" type="submit">Submit</button>
-  {{!-- {{else}} --}}
-    {{!-- <p>Please sign in to leave a review.</p> --}}
-  {{!-- {{/if}} --}}
+  {{else}}
+    <p>Please sign in to leave a review.</p>
+  {{/if}}
 </form>
 
 </div>

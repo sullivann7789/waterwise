@@ -1,18 +1,28 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Featured Brands</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
-       <body>
-    <header>
       <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">Featured Brands</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -20,59 +30,66 @@
             <li class="nav-item">
               <a class="nav-link" href="./wateringholes">Watering Holes</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./reviews">Reviews</a>
-            </li>
           </ul>
         </div>
       </nav>
     </header>
-    <main>
-      <div class="container mt-4">
+    <main id="featured-brands">
+      <div class="container">
         <h1>Featured Brands</h1>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-4">
-                  <div class="card">
-                    <img class="card-img-top" src="../images/Aquafina_3.webp" alt="Brand 1" />
-                    <div class="card-body">
-                      <h5 class="card-title">Aquafina</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card">
-                    <img class="card-img-top" src="../images/Arrowhead_2.jpeg" alt="Brand 2" />
-                    <div class="card-body">
-                      <h5 class="card-title">ArrowHead</h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card">
-                    <img class="card-img-top" src="../images/CrystalGeyser_1.webp" alt="Brand 3" />
-                    <div class="card-body">
-                      <h5 class="card-title">Crystal Geyser</h5>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-4">
-                  <div class="card">
-                    <img class="card-img-top" src="../images/Dasani_1.webp" alt="Brand 4" />
-                    <div class="card-body">
-                      <h5 class="card-title">Dasani</h5>
-                    </div>
-                  </div>
-                </div>
+        <div class="row">
+          <div class="col-md-4 featured-brand">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../images/Aquafina_1.jpeg"
+                alt="Aquafina"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aquafina</h5>
               </div>
             </div>
           </div>
-    <script type="text/javascript" src="layouts/main.handlebars"></script>
+          <div class="col-md-4 featured-brand">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../images/Arrowhead_2.webp"
+                alt="ArrowHead"
+              />
+              <div class="card-body">
+                <h5 class="card-title">ArrowHead</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 featured-brand">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../images/crystal_geyser2.jpeg"
+                alt="Crystal Geyser"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Crystal Geyser</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-4 featured-brand">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../images/Dasani_1.jpeg"
+                alt="Dasani"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dasani</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

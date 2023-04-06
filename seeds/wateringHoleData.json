@@ -1,17 +1,18 @@
 [
-    {
-        "name": "Dasani Water",
-        "description": "A community to discuss the horrible water that is Dasani",
-        "watering_hole_score": 3
-    },
-    {
-        "name": "Aquafina Water",
-        "description": "Where the average aquafina enjoyer can live in harmony.",
-        "watering_hole_score": 7
-    },
-    {
-        "name": "Fiji Water",
-        "description": "For all my 1 percenters out there.",
-        "watering_hole_score": 9
-    }
+  {
+    "name": "Dasani",
+    "description": "A community to discuss the horrible water that is Dasani",
+    "watering_hole_score": 3
+  },
+  {
+    "name": "Aquafina",
+    "description": "Where the average aquafina enjoyer can live in harmony.",
+    "watering_hole_score": 7,
+    "Aquafina_top_comment": "major brand alert"
+  },
+  {
+    "name": "Fiji",
+    "description": "For all my 1 percenters out there.",
+    "watering_hole_score": 9
+  }
 ]

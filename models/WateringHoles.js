@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class WateringHole extends Model {}
 
@@ -19,28 +19,31 @@ WateringHole.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    top_comment: {
+      type: DataTypes.STRING,
+    },
     watering_hole_score: {
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
         max: 10,
-        min: 0
-      }
+        min: 0,
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'User',
-        key: 'id'
-      }
-    }
+        model: "User",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'WateringHole',
+    modelName: "WateringHole",
   }
 );
 
