@@ -1,14 +1,6 @@
 const router = require('express').Router();
 const { User, WateringHole, Review } = require('../models');
-
-// use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
-
-// example of a protected route
-// router.get("/users-only", withAuth, (req, res) => {
-//   // ...
-// });
-
+const withAuth = require('../util/withAuth')
 router.get('/', async (req, res) => {
   try {
     let user;
@@ -37,7 +29,7 @@ router.get('/signup', (req, res) => {
   res.render('signup', { title: 'Sign-Up Page' });
 });
 
-router.get('/wateringholes', async (req, res) => {
+router.get('/wateringholes', withAuth, async (req, res) => {
   try {
     const wateringHoleData  = await WateringHole.findAll({
       include: [{ model: Review }]
@@ -53,7 +45,8 @@ router.get('/wateringholes', async (req, res) => {
   }
 });
 
-router.get('/wateringholes/:id', async (req, res) => {
+
+router.get('/wateringholes/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       where: { watering_hole_id: req.params.id },
