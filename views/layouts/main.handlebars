@@ -8,12 +8,12 @@
   </head>
   <body>
     <nav>
-      <a href="/">Home</a>
+      <a id="navbar-brand" href="/">Home</a>
       {{#if isLoggedIn}}
         <button class="btn btn-logout">Log Out</button>
       {{else}}
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
+        <a id="navbar-brand" href="/login">Login</a>
+        <a id="navbar-brand" href="/signup">Signup</a>
       {{/if}}
     </nav>
     {{{body}}}
