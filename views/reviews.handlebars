@@ -44,10 +44,10 @@
         </div>
           <p class="review-card-text">{{review.description}}</p>
         </div>
-      </div>
       {{#if (equals ../sessionId review.user_id)}}
         <button type="button" class="btn btn-danger" data-id="{{review.id}}">Delete</button>
       {{/if}}
+      </div>
       {{/each}}
     </div>
     {{else}}
