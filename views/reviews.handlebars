@@ -14,6 +14,8 @@
 
       <header>
       <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
+        <a id="navbar-brand" href="/">Featured Brands</a>
+
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,17 +28,18 @@
       </nav>
     </header>
 
-    <h2>{{reviews.[0].WateringHole.name}} Watering Hole</h2>
-    <h3>Created by: {{reviews.[0].User.username}}</h3>
+    <h2 class="review-name">{{reviews.[0].WateringHole.name}} Watering Hole</h2>
+    <h3 class="review-author">Created by: {{reviews.[0].User.username}}</h3>
     {{#if reviews.length}}
       {{#each reviews as |review|}}
-      <div class="card">
-        <div class="card-header">
-            {{review.User.username}} gave a score of {{review.review_score}}
+      <div class="review-card">
+       
+        <div class="review-card-body">
+          <h5 class="review-card-title">"{{review.name}}" </h5>
+          <div class="review-card-header">
+            - {{review.User.username}}, gave a score of {{review.review_score}}
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{{review.name}} </h5>
-          <p class="card-text">{{review.description}} {{wateringHole.User.username}}</p>
+          <p class="review-card-text">{{review.description}} {{wateringHole.User.username}}</p>
         </div>
       </div>
       {{/each}}
