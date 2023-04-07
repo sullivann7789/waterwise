@@ -2,7 +2,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Featured Brands</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
 
@@ -26,18 +32,19 @@
     <img src="../images/WateringHole.jpeg" alt="Watering hole logo">
     <h2><a href="/wateringholes/{{wateringHole.id}}">{{wateringHole.name}}</a></h2>
     <p>Overall Rating: {{overallScore wateringHole}}</p>
+    {{#if (equals ../sessionId wateringHole.user_id)}}
+    <button type="button" class="btn btn-danger" data-id="{{wateringHole.id}}">Delete</button>
+    {{/if}}
   </div>
   {{/each}}
 
 
-<form>
-  {{#if isLoggedIn}}
-  <input type="hidden" name="user_id" value="{{user_id}}">
-    <label for="wateringholepost">Creae a Watering Hole:</label>
+<form id="create-wateringhole-form">
+    <label for="wateringholepost">Create a Watering Hole:</label>
     <label for="wateringholetype">Watering Hole Name:</label>
-    <input type="text" name="wateringholetype" />
+    <input type="text" name="wateringholetype" id="wateringhole-name"/>
     <label for="wateringholepost">Watering Hole Description here:</label>
-    <input type="text" name="wateringholepost" id="wateringhole" /><br />
+    <input type="text" name="wateringholepost" id="wateringhole-description"/><br/>
     <label for="wateringholerating">Initial Rating:</label>
     <div class="rating-section">
       <input type="radio" id="star10" name="wateringholerating" value="10" />
@@ -62,11 +69,10 @@
       <label for="star1"></label>
     </div>
     <button class="btn" type="submit">Submit</button>
-  {{else}}
-    <p>Please sign in to leave a review.</p>
-  {{/if}}
 </form>
 
 </div>
 <script src="/js/main.js"></script>
+<script src="./js/wateringholes.js"></script>
+
 </body>
