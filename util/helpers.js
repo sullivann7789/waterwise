@@ -6,5 +6,9 @@ module.exports = {
     }
     const avg = total / (wateringHole.Reviews.length + 1);
     return avg.toFixed(1);
+  },
+  equals: (num1, num2) => {
+    return (num1 === num2);
   }
+
 };

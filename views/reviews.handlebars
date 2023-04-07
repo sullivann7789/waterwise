@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <title>Featured Brands</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-     <link
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -28,25 +28,66 @@
       </nav>
     </header>
 
-    <h2 class="review-name">{{reviews.[0].WateringHole.name}} Watering Hole</h2>
-    <h3 class="review-author">Created by: {{reviews.[0].User.username}}</h3>
+
+    <h2 class="review-name">{{wateringHole.name}} Watering Hole</h2>
+    <h3 class="review-author">{{wateringHole.description}}</h3>
+    <h3 class="review-author">Created by: {{wateringHole.User.username}}</h3>
+
     {{#if reviews.length}}
+    <div class="review-list">
       {{#each reviews as |review|}}
       <div class="review-card">
-       
         <div class="review-card-body">
-          <h5 class="review-card-title">"{{review.name}}" </h5>
+          <h5 class="review-card-title">"{{review.name}}"</h5>
           <div class="review-card-header">
             - {{review.User.username}}, gave a score of {{review.review_score}}
         </div>
-          <p class="review-card-text">{{review.description}} {{wateringHole.User.username}}</p>
+          <p class="review-card-text">{{review.description}}</p>
         </div>
       </div>
+      {{#if (equals ../sessionId review.user_id)}}
+        <button type="button" class="btn btn-danger" data-id="{{review.id}}">Delete</button>
+      {{/if}}
       {{/each}}
+    </div>
     {{else}}
       <h2>This watering hole has no reviews.</h2>
     {{/if}}
-    <script src="/js/main.js"></script>
 
+    <form id="create-wateringhole-form">
+      <input type="hidden" id="watering-hole-id" name="watering-hole-id" value="{{wateringHole.id}}">
+      <label for="wateringholepost">Post a Review:</label>
+      <label for="wateringholetype">Review Name:</label>
+      <input type="text" name="wateringholetype" id="review-name"/>
+      <label for="wateringholepost">Review here:</label>
+      <input type="text" name="wateringholepost" id="review-description"/><br/>
+      <label for="wateringholerating">Initial Rating:</label>
+      <div class="rating-section">
+        <input type="radio" id="star10" name="wateringholerating" value="10" />
+        <label for="star10"></label>
+        <input type="radio" id="star9" name="wateringholerating" value="9" />
+        <label for="star9"></label>
+        <input type="radio" id="star8" name="wateringholerating" value="8" />
+        <label for="star8"></label>
+        <input type="radio" id="star7" name="wateringholerating" value="7" />
+        <label for="star7"></label>
+        <input type="radio" id="star6" name="wateringholerating" value="6" />
+        <label for="star6"></label>
+        <input type="radio" id="star5" name="wateringholerating" value="5" />
+        <label for="star5"></label>
+        <input type="radio" id="star4" name="wateringholerating" value="4" />
+        <label for="star4"></label>
+        <input type="radio" id="star3" name="wateringholerating" value="3" />
+        <label for="star3"></label>
+        <input type="radio" id="star2" name="wateringholerating" value="2" />
+        <label for="star2"></label>
+        <input type="radio" id="star1" name="wateringholerating" value="1" />
+        <label for="star1"></label>
+      </div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/reviews.js"></script>
   </body>
 </html>
