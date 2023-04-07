@@ -53,9 +53,18 @@ router.get('/wateringholes/:id', withAuth, async (req, res) => {
       where: { watering_hole_id: req.params.id },
       include: [{ model: User }, { model: WateringHole }]
     });
+    const wateringHoleData = await WateringHole.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [{ model: User }]
+    });
     const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const wateringHole = wateringHoleData.get({ plain: true });
     res.render('reviews', { 
       reviews,
+      wateringHole,
+      sessionId: req.session.userId,
       isLoggedIn: req.session.isLoggedIn
     });
   } catch (err) {
