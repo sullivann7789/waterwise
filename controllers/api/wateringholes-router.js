@@ -6,7 +6,7 @@ router.post("/", withAuth, async (req, res) => {
   try {
     const wateringHoleData = await WateringHole.create({
       ...req.body,
-      user_id: req.body.user_id,
+      user_id: req.session.userId,
     });
     res.status(200).json(wateringHoleData);
   } catch (err) {
@@ -48,7 +48,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     const wateringHoleData = await WateringHole.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        user_id: req.session.userId,
       },
     });
 

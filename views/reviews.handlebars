@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <title>Featured Brands</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-     <link
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -27,6 +27,7 @@
     </header>
 
     <h2>{{reviews.[0].WateringHole.name}} Watering Hole</h2>
+    <p>{{reviews.[0].WateringHole.description}}</p>
     <h3>Created by: {{reviews.[0].User.username}}</h3>
     {{#if reviews.length}}
       {{#each reviews as |review|}}

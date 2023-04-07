@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, WateringHole, Review } = require('../models');
 const withAuth = require('../util/withAuth')
+
 router.get('/', async (req, res) => {
   try {
     let user;
@@ -36,8 +37,8 @@ router.get('/wateringholes', withAuth, async (req, res) => {
     });
     const wateringHoles = wateringHoleData.map((wateringHole) => wateringHole.get({ plain: true }));
     res.render('wateringholes', {
-      title: 'Watering Holes', 
       wateringHoles,
+      sessionId: req.session.userId,
       isLoggedIn: req.session.isLoggedIn
     });
   } catch (err) {
